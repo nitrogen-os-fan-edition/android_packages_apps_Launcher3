@@ -65,6 +65,7 @@ import android.view.accessibility.AccessibilityNodeInfo;
 import android.widget.Toast;
 
 import com.android.internal.util.nitrogen.NitrogenUtils;
+import com.android.internal.util.hwkeys.ActionUtils;
 import com.android.launcher3.LauncherAppWidgetHost.ProviderChangedListener;
 import com.android.launcher3.accessibility.AccessibleDragListenerAdapter;
 import com.android.launcher3.accessibility.WorkspaceAccessibilityHelper;
@@ -296,7 +297,7 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
                 new GestureDetector(context, new GestureDetector.SimpleOnGestureListener() {
             @Override
             public boolean onDoubleTap(MotionEvent event) {
-                NitrogenUtils.switchScreenOff(context);
+                ActionUtils.switchScreenOff(context);
                 return true;
             }
         });
